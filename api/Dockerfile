@@ -1,9 +1,6 @@
-FROM node:16-slim
-
+FROM node:16-alpine
+RUN apk add --update python3 make g++
 WORKDIR /api
-
-RUN apt-get update
-RUN apt-get install -y make
 
 COPY . .
 
